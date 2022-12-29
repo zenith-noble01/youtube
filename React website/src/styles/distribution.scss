@@ -1,0 +1,49 @@
+@import "./constants";
+@import "./variables";
+
+.app__distribution {
+  padding: 40% $md-gap 10% $md-gap;
+  .distribution__container {
+    @include flexAlign;
+    width: 100%;
+
+    .left__distribution {
+      flex: 1;
+      @include flexDirection;
+      gap: $lg-gap;
+
+      .distribtion__text {
+        @include flexDirection;
+        gap: $lg-gap;
+      }
+
+      .distribution__buttons {
+        @include flexAlign;
+        gap: $lg-gap;
+
+        button {
+          @include button;
+          background: $primary-color;
+          color: $secondary-color;
+          @include flexAlign;
+          gap: $sm-gap;
+        }
+      }
+    }
+    .right__distribution {
+      flex: 1;
+      @include flexAlign;
+      justify-content: flex-end;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: $primary-color;
+    }
+
+    p {
+      color: $neutral-color;
+      font-size: 1.3rem;
+    }
+  }
+}

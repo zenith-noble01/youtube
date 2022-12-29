@@ -1,0 +1,85 @@
+@import "./constants";
+@import "./variables";
+
+.feature__controls {
+  width: 70%;
+  position: absolute;
+  bottom: -40%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: $secondary-color;
+  padding: $md-gap;
+  border-radius: 20px;
+  box-shadow: $shadow;
+
+  .control__container {
+    width: 100%;
+    @include flexDirection;
+    gap: $lg-gap;
+
+    .control__text {
+      @include flexDirection;
+      gap: $lg-gap;
+      text-align: center;
+
+      h1 {
+        font-size: 4rem;
+        color: $primary-color;
+      }
+
+      p {
+        color: $neutral-color;
+        font-size: 1.3rem;
+      }
+
+      button {
+        @include button;
+        background: $primary-color;
+        width: fit-content;
+        color: $secondary-color;
+        box-shadow: $shadow;
+        align-self: center;
+      }
+    }
+
+    .control__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: $lg-gap;
+
+      .control {
+        background: $primary-color;
+        color: $secondary-color;
+        padding: $lg-gap;
+        border-radius: 20px;
+        @include flexCenter;
+        flex-direction: column;
+        gap: $lg-gap;
+
+        .control__icon {
+          height: 30px;
+          width: 30px;
+          background: $elementary-color;
+          color: $secondary-color;
+          @include flexCenter;
+          border-radius: 50%;
+          box-shadow: $elementary-shadow;
+        }
+
+        .control__text-content {
+          @include flexAlign;
+          flex-direction: column;
+          text-align: center;
+          p {
+            font-weight: bold;
+          }
+
+          span {
+            color: $neutral-color;
+          }
+        }
+      }
+    }
+  }
+}

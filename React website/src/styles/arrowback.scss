@@ -1,0 +1,28 @@
+@import "./constants";
+@import "./variables";
+
+.app__arrowback {
+  background: $elementary-color;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  cursor: pointer;
+  color: $neutral;
+  opacity: 0;
+  pointer-events: none;
+  transition: $trans;
+  overflow: hidden;
+  &.active {
+    opacity: 1;
+    pointer-events: visible;
+  }
+
+  a {
+    height: 100%;
+    width: 100%;
+    @include flexCenter;
+  }
+}

@@ -1,0 +1,71 @@
+@import "./constants";
+@import "./variables";
+
+.app__feature {
+  background: $primary-color;
+  padding: $md-gap $md-gap 20% $md-gap;
+  position: relative;
+
+  .feature__container {
+    @include flexAlign;
+    gap: $lg-gap;
+
+    .left__feature {
+      flex: 1;
+
+      img {
+        width: 100%;
+      }
+    }
+    .right__feature {
+      @include flexDirection;
+      flex: 1;
+      gap: $lg-gap;
+
+      .right__text {
+        @include flexDirection;
+        gap: $lg-gap;
+
+        h1 {
+          font-size: 4rem;
+          color: $secondary-color;
+        }
+
+        p {
+          color: $neutral-color;
+          font-size: 1.3rem;
+        }
+      }
+
+      .feature__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $lg-gap;
+
+        .feature {
+          display: flex;
+          gap: $sm-gap;
+
+          svg {
+            // background: ;
+            height: 20px;
+            min-width: 20px;
+            border-radius: 5px;
+            background: $elementary-color;
+            font-size: 0.1;
+          }
+
+          .feature__text {
+            p {
+              color: $secondary-color;
+              font-weight: bold;
+            }
+            span {
+              color: $neutral-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
