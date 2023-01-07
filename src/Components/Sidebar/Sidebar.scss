@@ -1,0 +1,120 @@
+.app__sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  background: var(--white);
+  z-index: 1;
+  transition: var(--trans);
+  border-right: var(--border);
+  padding: 2rem;
+
+  .sidebar__header {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+
+    svg {
+      color: var(--red);
+      margin-right: 1rem;
+      height: 40px;
+      width: 40px;
+      border-radius: 5px;
+      padding: 5px;
+      background: var(--light);
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      span {
+        color: var(--red);
+      }
+    }
+  }
+
+  .sidebar__routes {
+    margin-top: 2rem;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          padding: 0.8rem 1rem;
+          transition: var(--trans);
+          border-radius: 5px;
+
+          svg {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+          }
+
+          &:hover {
+            background: var(--yellow);
+          }
+
+          &.active {
+            background: var(--yellow);
+          }
+        }
+      }
+    }
+
+    .user__profile__container {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      margin-top: 3rem;
+      box-shadow: var(--shadow);
+      border-radius: 5px;
+      padding: 1rem;
+      gap: 1rem;
+
+      .user__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+      }
+
+      .profile__link {
+        background: var(--light);
+        padding: 0.8rem 1rem;
+        border-radius: 5px;
+        text-align: center;
+        transition: var(--trans);
+
+        &:hover {
+          background: var(--yellow);
+        }
+
+        &.active {
+          background: var(--yellow);
+        }
+      }
+    }
+  }
+}

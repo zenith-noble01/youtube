@@ -1,0 +1,41 @@
+.home__count {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+
+  .home__items {
+    background: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+    gap: 1rem;
+
+    .item__title {
+      color: var(--light_dark);
+    }
+
+    .item__count {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+
+      p {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      svg {
+        color: rgb(0, 128, 94);
+        &.down {
+          color: red;
+        }
+      }
+
+      span {
+        color: var(--light_dark);
+      }
+    }
+  }
+}

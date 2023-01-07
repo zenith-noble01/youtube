@@ -1,0 +1,41 @@
+.app__foods {
+  background: var(--light);
+  min-height: 100vh;
+
+  .foods__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // background: red;
+    gap: 1rem;
+    padding-top: 2rem;
+
+    .food__container {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+      border-radius: 5px;
+      transition: var(--trans);
+      cursor: pointer;
+      text-align: center;
+      height: fit-content;
+
+      img {
+        max-height: 500px;
+        object-fit: cover;
+      }
+
+      p {
+        margin: 2rem 0;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+
+      span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--yellow);
+      }
+    }
+  }
+}
