@@ -1,0 +1,40 @@
+@import "./Styles/variables";
+@import "./Styles/constant";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Product Sans", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.app__sttop {
+  background: $elementary-color;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  color: $neutral;
+  opacity: 0;
+  transition: $trans;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: visible;
+  }
+
+  a {
+    height: 100%;
+    width: 100%;
+    @include flexCenter;
+  }
+}

@@ -1,0 +1,69 @@
+@import "./constant";
+@import "./variables";
+
+.app__analytics {
+  height: fit-content;
+  background: $secondary-color;
+  padding: 35% $md-gap 10% $md-gap;
+
+  .analytics__container {
+    @include flexAlign;
+
+    .left__analytics {
+      @include flexDirection;
+      gap: $lg-gap;
+      flex: 1;
+
+      .left__text {
+        @include flexDirection;
+        gap: $lg-gap;
+
+        h1 {
+          font-size: 4rem;
+          color: $primary-color;
+        }
+
+        p {
+          color: $neutral-color;
+          font-size: 1.3rem;
+        }
+      }
+
+      .left__analytics__container {
+        @include flexAlign;
+        gap: $lg-gap;
+
+        .analytic__container {
+          @include flexAlign;
+          flex-direction: column;
+          gap: $lg-gap;
+          cursor: pointer;
+          color: $primary-color;
+          font-weight: bold;
+
+          .analytics__icon {
+            height: 180px;
+            width: 180px;
+            border-radius: 20px;
+            background: $neutral;
+            font-size: 2rem;
+            transition: $trans;
+            @include flexCenter;
+
+            &:hover {
+              background: $secondary-color;
+              box-shadow: $shadow;
+              @include textGradient;
+            }
+          }
+        }
+      }
+    }
+
+    .right__analytics {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

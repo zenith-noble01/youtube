@@ -1,0 +1,48 @@
+@import "./constant";
+@import "./variables";
+
+.app__home {
+  height: 130vh;
+  background: $primary-color;
+  padding: $ex-gap $md-gap;
+  @include flexDirection;
+  gap: 3rem;
+
+  .home__text {
+    text-align: center;
+
+    h1 {
+      @include textGradient;
+      font-size: 5rem;
+    }
+  }
+
+  .ticks__container {
+    @include flexCenter;
+    color: $secondary-color;
+    gap: $lg-gap;
+
+    p {
+      @include flexAlign;
+      gap: $t-gap;
+      color: $neutral-color;
+
+      span {
+        @include flexCenter;
+        height: 20px;
+        width: 20px;
+        background: $secondary-color;
+        border-radius: 5px;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .input__container {
+    @include inputContainer;
+
+    button {
+      background: $secondary-color;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "./constant";
+@import "./variables";
+
+.app__distribution {
+  padding: 40% $md-gap 10% $md-gap;
+
+  .distribution__container {
+    @include flexAlign;
+
+    .left__distribution {
+      flex: 1;
+      @include flexDirection;
+      gap: $lg-gap;
+
+      .distribution__text {
+        @include flexDirection;
+        gap: $lg-gap;
+
+        h1 {
+          font-size: 4rem;
+          color: $primary-color;
+        }
+
+        p {
+          font-size: 1.3rem;
+          color: $neutral-color;
+        }
+      }
+
+      .distribution__buttons {
+        @include flexAlign;
+        gap: $lg-gap;
+
+        button {
+          @include button;
+          background: $primary-color;
+          color: $secondary-color;
+          gap: $sm-gap;
+          @include flexAlign;
+        }
+      }
+    }
+
+    .right__distribution {
+      flex: 1;
+      @include flexAlign;
+      justify-content: flex-end;
+    }
+  }
+}

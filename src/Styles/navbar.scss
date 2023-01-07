@@ -1,0 +1,45 @@
+@import "./constant";
+@import "./variables";
+
+.app__navbar {
+  @include flexBetween;
+  height: 70px;
+  padding: 0 $md-gap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: $trans;
+  color: $secondary-color;
+  z-index: 2;
+
+  &.active {
+    background: hsl(0 0% 100% / 0.8);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+    color: $primary-color;
+  }
+
+  .navbar__logo {
+    @include logo;
+  }
+
+  .navbar__routes {
+    @include routes;
+  }
+
+  .navbar__buttons {
+    @include flexAlign;
+    gap: $lg-gap;
+
+    button {
+      @include button;
+      background: $secondary-color;
+      color: $primary-color;
+
+      &.onebtn {
+        background: transparent;
+      }
+    }
+  }
+}

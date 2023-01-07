@@ -1,0 +1,96 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexRow {
+  display: flex;
+}
+
+@mixin flexAlign {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexDirection {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin button {
+  padding: 0 2rem;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 20px;
+  background: none;
+  font-weight: bold;
+}
+
+@mixin routes {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+
+  li {
+    cursor: pointer;
+  }
+}
+
+@mixin logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@mixin input {
+  flex: 1;
+  color: $neutral-color;
+  padding: 0 2rem;
+  border: none;
+  height: 40px;
+  outline: none;
+  background: none;
+  font-weight: bold;
+}
+
+@mixin inputContainer {
+  width: 35%;
+  align-self: center;
+  padding: 0.2rem;
+  border-radius: 25px;
+  @include flexAlign;
+  gap: $t-gap;
+  border: $border;
+  input {
+    @include input;
+  }
+
+  button {
+    @include button;
+  }
+}
+
+@mixin textGradient {
+  font-weight: bold;
+  background-image: $text-gradient;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

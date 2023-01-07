@@ -1,0 +1,84 @@
+@import "./constant";
+@import "./variables";
+
+.feature__controls {
+  width: 70%;
+  position: absolute;
+  bottom: -40%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: $secondary-color;
+  padding: $md-gap;
+  border-radius: 20px;
+  box-shadow: $shadow;
+
+  .control__container {
+    width: 100%;
+    @include flexDirection;
+    gap: $lg-gap;
+
+    .control__text {
+      @include flexDirection;
+      gap: $lg-gap;
+      text-align: center;
+
+      h1 {
+        font-size: 4rem;
+        color: $primary-color;
+      }
+
+      p {
+        color: $neutral-color;
+        font-size: 1.3rem;
+      }
+
+      button {
+        @include button;
+        background: $primary-color;
+        width: fit-content;
+        color: $secondary-color;
+        align-self: center;
+      }
+    }
+
+    .control__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: $lg-gap;
+
+      .control {
+        background: $primary-color;
+        padding: $lg-gap;
+        border-radius: 20px;
+        @include flexCenter;
+        gap: $lg-gap;
+        flex-direction: column;
+        color: $secondary-color;
+
+        .control__icon {
+          width: 30px;
+          height: 30px;
+          background: $elementary-color;
+          box-shadow: $elementary-shadow;
+          @include flexCenter;
+          border-radius: 50%;
+        }
+
+        .control__text__content {
+          @include flexAlign;
+          flex-direction: column;
+          text-align: center;
+
+          p {
+            font-weight: bold;
+          }
+
+          span {
+            color: $neutral-color;
+          }
+        }
+      }
+    }
+  }
+}
