@@ -1,0 +1,46 @@
+@mixin flexAlign {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexDirection($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin userProfile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@mixin input {
+  height: 40px;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0 $sm-gap;
+}
+
+@mixin button {
+  height: 35px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0 $gap;
+}

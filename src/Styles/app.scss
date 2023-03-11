@@ -1,0 +1,45 @@
+@import "./variables";
+@import "./constants";
+
+:root {
+  --primary-color: #1e1f23;
+  --secondary-color: #17181c;
+  --acent-color: #27282f;
+  --b-color: #2c85f6;
+  --n-bg: #34353e;
+  --red-color: #e5453f;
+  --text-color: whitesmoke;
+  --gap: 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.App {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+
+  &[dark-theme="light"] {
+    --primary-color: #ffffff;
+    --secondary-color: #f9f9f9;
+    --acent-color: #f9f9f9;
+    --b-color: #2c85f6;
+    --border: 2px solid rgba(128, 128, 128, 0.214);
+    --text-color: #444;
+    --n-bg: white;
+  }
+
+  .app__container {
+    background: red;
+    @include flexDirection(column);
+    gap: $gap;
+  }
+}
