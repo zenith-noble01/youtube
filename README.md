@@ -1,7 +1,7 @@
 # Getting Started with the code boiler plate
 
 ```bash
-git clone https://github.com/zenith-noble01/react-boilerPlate.git
+git clone -b <branch> <remote_repo>
 ```
 
 # Installing all depencies
