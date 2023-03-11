@@ -1,13 +1,7 @@
 import React from "react";
-import { Friends, RecentRequest } from "./";
 
 const FeedSidebar = () => {
-  return (
-    <div className="home__feedSidebar">
-      <RecentRequest />
-      <Friends />
-    </div>
-  );
+  return <div>FeedSidebar</div>;
 };
 
 export default FeedSidebar;
