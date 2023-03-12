@@ -1,2 +1,28 @@
 @import "./variables";
 @import "./constants";
+
+.friends__container {
+  @include flexDirection(column);
+  gap: $sm-gap;
+  background: var(--primary-color);
+  padding: $sm-gap;
+  border: var(--border);
+  border-radius: 10px;
+
+  .friend__container {
+    @include flexAlign;
+    gap: $sm-gap;
+
+    img {
+      @include userProfile;
+    }
+
+    p {
+      @include flexDirection(column);
+
+      span {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

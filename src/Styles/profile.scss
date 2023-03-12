@@ -1,2 +1,78 @@
 @import "./constants";
 @import "./variables";
+
+.app__profile {
+  width: 100%;
+  @include flexDirection(row);
+  height: 100%;
+  transition: $trans;
+
+  .profile__container {
+    width: 75%;
+    padding: $gap;
+
+    .profile__wrapper {
+      position: relative;
+      height: fit-content;
+
+      .cover__container {
+        img {
+          height: 312px;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+      }
+
+      .profile__content {
+        position: absolute;
+        bottom: -7rem;
+        left: 5rem;
+        height: 178px;
+        width: 178px;
+        padding: 0.5rem;
+        border-radius: 50%;
+        background: var(--secondary-color);
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      .user__profileData {
+        position: absolute;
+        right: 0;
+        margin-top: 0.5rem;
+        width: 70%;
+        @include flexBetween;
+
+        .userName {
+          p {
+            color: #555;
+            gap: $gap;
+            @include flexAlign;
+          }
+        }
+
+        a {
+          @include button;
+          background: var(--b-color);
+          border-radius: 5px;
+          @include flexAlign;
+          gap: $sm-gap;
+
+          svg {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .user__data {
+      padding: 10rem 15% 2rem;
+    }
+  }
+}

@@ -1,2 +1,76 @@
 @import "./variables";
 @import "./constants";
+
+.app__navbar {
+  height: 70px;
+  background: var(--primary-color);
+  width: 100%;
+  @include flexAlign;
+  transition: $trans;
+  padding: 0 $gap;
+  position: sticky;
+  top: 0;
+  @include flexBetween;
+
+  .left__navbar {
+    @include flexAlign;
+    gap: $gap;
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    ul {
+      @include flexAlign;
+      list-style: none;
+      gap: $sm-gap;
+      padding: 0.5rem;
+      transition: $trans;
+
+      li {
+        background: var(--n-bg);
+        height: 30px;
+        padding: 0 $sm-gap;
+        @include flexCenter;
+        cursor: pointer;
+        border-radius: 5px;
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .right__navbar {
+    @include flexAlign;
+    gap: $gap;
+
+    ul {
+      @include flexAlign;
+      list-style: none;
+      gap: $sm-gap;
+      padding: 0.5rem;
+      transition: $trans;
+
+      li {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: var(--acent-color);
+        @include flexCenter;
+        transition: $trans;
+        cursor: pointer;
+      }
+    }
+
+    .userContent {
+      a {
+        @include flexAlign;
+        gap: $gap;
+
+        img {
+          @include userProfile;
+        }
+      }
+    }
+  }
+}

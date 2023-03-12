@@ -1,2 +1,32 @@
 @import "./constants";
 @import "./variables";
+
+.app__home {
+  width: 100%;
+  display: flex;
+  transition: all $trans;
+
+  .home__container {
+    width: 75%;
+    @include flexDirection(column);
+    gap: $gap;
+    padding-bottom: $gap;
+
+    .home__content {
+      @include flexDirection(row);
+      gap: $gap;
+      padding: 0 $gap;
+
+      .posts__wrapper__container {
+        width: 70%;
+        gap: $gap;
+        @include flexDirection(column);
+      }
+    }
+
+    .home__feedsidebar {
+      @include flexDirection(column);
+      gap: $gap;
+    }
+  }
+}

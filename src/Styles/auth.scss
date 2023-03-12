@@ -1,2 +1,102 @@
 @import "./constants";
 @import "./variables";
+
+.app__auth {
+  background: var(--secondary-color);
+  height: 100vh;
+  @include flexCenter;
+  width: 100%;
+
+  form {
+    background: var(--primary-color);
+    padding: $gap;
+    border-radius: 10px;
+    width: 35%;
+    @include flexDirection(column);
+    gap: $sm-gap;
+    border: var(--border);
+
+    .auth__header {
+      @include flexDirection(column);
+      text-align: center;
+      color: var(--b-color);
+
+      span {
+        font-size: 0.7rem;
+      }
+    }
+
+    .input__container {
+      width: 100%;
+
+      input {
+        width: 100%;
+        @include input;
+        border: var(--border);
+        color: var(--text-color);
+      }
+    }
+
+    .or__container {
+      @include flexDirection(column);
+      padding: 3rem 0;
+
+      .or__text {
+        position: relative;
+        height: 2px;
+        background: var(--acent-color);
+
+        p {
+          position: absolute;
+          height: 50px;
+          width: 50px;
+          background: var(--primary-color);
+          @include flexCenter;
+          border: var(--border);
+          border-radius: 50%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+      }
+
+      .or__wrapper {
+        @include flexAlign;
+        padding-top: 3rem;
+        gap: $sm-gap;
+      }
+    }
+
+    button {
+      flex: 1;
+      @include button;
+      border-radius: 5px;
+      transition: $trans;
+      color: whitesmoke;
+
+      &.google {
+        background: var(--red-color);
+      }
+
+      &.github {
+        background: var(--secondary-color);
+      }
+
+      &.auth__action {
+        border: var(--border);
+        padding: 0.7rem;
+
+        &:hover {
+          background: var(--b-color);
+          border: 1px solid $b-color;
+        }
+      }
+    }
+
+    .linkWrapper {
+      text-align: center;
+    }
+  }
+}

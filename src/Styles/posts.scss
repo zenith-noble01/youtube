@@ -1,2 +1,75 @@
 @import "./constants";
 @import "./variables";
+
+.posts__container {
+  @include flexDirection(column);
+  gap: $gap;
+  width: 100%;
+
+  .post__content {
+    width: 100%;
+    background: var(--primary-color);
+    border: var(--border);
+    border-radius: 10px;
+
+    .post__top {
+      @include flexDirection(column);
+      gap: $sm-gap;
+      padding: $sm-gap;
+
+      .post__header {
+        @include flexBetween;
+
+        .post__user {
+          @include flexAlign;
+          gap: $sm-gap;
+
+          img {
+            @include userProfile;
+          }
+        }
+
+        .post__user-infos {
+          @include flexDirection(column);
+          span {
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      .post__options {
+        @include flexAlign;
+        gap: $sm-gap;
+        list-style: none;
+
+        li {
+          cursor: pointer;
+
+          svg {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+
+    .post__preview {
+      img {
+        max-height: 500px;
+        object-fit: cover;
+      }
+
+      .post__actions {
+        @include flexBetween;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: $sm-gap;
+
+        li {
+          @include flexAlign;
+          gap: 0.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

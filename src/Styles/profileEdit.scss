@@ -1,2 +1,90 @@
 @import "./constants";
 @import "./variables";
+
+.app__profileEdit {
+  width: 100%;
+  @include flexDirection(row);
+
+  .profileEdit__container {
+    width: 75%;
+    padding: $gap;
+
+    .user__profile__picture {
+      position: relative;
+
+      .cover__edit {
+        position: relative;
+
+        .userCoverPic {
+          height: 250px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+
+        .edit {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          height: 40px;
+          width: 40px;
+          background: var(--primary-color);
+          font-size: 0.7rem;
+          @include flexCenter;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+
+      .profile__picture {
+        position: absolute;
+        bottom: -3rem;
+        left: 4rem;
+
+        .userProfile {
+          height: 120px;
+          width: 120px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        .edit {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          height: 40px;
+          width: 40px;
+          background: var(--primary-color);
+          font-size: 0.7rem;
+          @include flexCenter;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .input__wrapper {
+      padding: 8rem 25% 0;
+      @include flexDirection(column);
+      width: 100%;
+      gap: $sm-gap;
+
+      .input__container {
+        width: 100%;
+
+        input {
+          width: 100%;
+          @include input;
+          border: var(--border);
+          color: var(--text-color);
+        }
+      }
+
+      button {
+        @include button;
+        border-radius: 5px;
+        color: whitesmoke;
+        background: $b-color;
+      }
+    }
+  }
+}

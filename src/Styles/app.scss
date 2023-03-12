@@ -27,7 +27,7 @@ img {
   min-height: 100vh;
   display: flex;
 
-  &[dark-theme="light"] {
+  &[data-theme="light"] {
     --primary-color: #ffffff;
     --secondary-color: #f9f9f9;
     --acent-color: #f9f9f9;

@@ -1,2 +1,120 @@
 @import "./constants";
 @import "./variables";
+
+.app__post {
+  width: 100%;
+  background: var(--secondary-color);
+  @include flexDirection(row);
+
+  .post__wrapper {
+    @include flexCenter;
+    width: 75%;
+    background: var(--primary-color);
+
+    .post__wrapper__container {
+      width: 90%;
+      height: 90%;
+      border: var(--border);
+      @include flexDirection(row);
+
+      .post__img {
+        height: 100%;
+        width: 50%;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .post__wrapper__content {
+        width: 50%;
+        position: relative;
+
+        .user__post {
+          @include flexAlign;
+          @include flexBetween;
+          height: 60px;
+          padding: 0 $sm-gap;
+          border-bottom: var(--border);
+
+          .user__profile {
+            @include flexAlign;
+            gap: $sm-gap;
+
+            img {
+              @include userProfile;
+            }
+          }
+
+          svg {
+            cursor: pointer;
+          }
+        }
+
+        .post__content {
+          overflow-x: auto;
+          padding: 0.5rem;
+          @include flexDirection(column);
+          gap: $gap;
+
+          .comment__container {
+            @include flexDirection(column);
+            gap: $sm-gap;
+
+            .comment {
+              @include flexDirection(row);
+              gap: $sm-gap;
+            }
+
+            img {
+              @include userProfile;
+            }
+          }
+        }
+        .post__actions {
+          position: absolute;
+          bottom: 0;
+          height: fit-content;
+          width: 100%;
+          background: var(--primary-color);
+
+          .post__action__wrapper {
+            @include flexBetween;
+            list-style: none;
+            padding: $sm-gap;
+            flex: 1;
+            border-top: var(--border);
+
+            li {
+              @include flexAlign;
+              gap: $sm-gap;
+            }
+          }
+
+          .add__comment {
+            @include flexAlign;
+            padding: 0.5rem;
+
+            border-top: var(--border);
+            svg {
+              font-size: 1.5rem;
+            }
+
+            input {
+              color: var(--text-color);
+              @include input;
+              flex: 1;
+            }
+
+            button {
+              color: var(--text-color);
+              @include button;
+            }
+          }
+        }
+      }
+    }
+  }
+}

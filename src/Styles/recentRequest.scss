@@ -1,2 +1,43 @@
 @import "./variables";
 @import "./constants";
+
+.recent__requests {
+  @include flexDirection(column);
+  gap: $sm-gap;
+  background: var(--primary-color);
+  padding: $sm-gap;
+  border: var(--border);
+  border-radius: 10px;
+
+  .recent__container {
+    @include flexDirection(column);
+    gap: 0.5rem;
+
+    .recent__user {
+      @include flexAlign;
+      gap: $sm-gap;
+
+      img {
+        @include userProfile;
+      }
+    }
+
+    .request__actions {
+      @include flexAlign;
+      gap: $sm-gap;
+
+      button {
+        @include button;
+        flex: 1;
+        background: var(--b-color);
+        border-radius: 5px;
+        color: whitesmoke;
+        font-weight: bold;
+
+        &:last-child {
+          background: var(--red-color);
+        }
+      }
+    }
+  }
+}

@@ -1,2 +1,58 @@
 @import "./constants";
 @import "./variables";
+
+.share__container {
+  background: var(--primary-color);
+  padding: $sm-gap;
+  border-radius: 10px;
+  border: var(--border);
+  @include flexDirection(column);
+  gap: $gap;
+
+  .share__top {
+    @include flexAlign;
+    gap: $sm-gap;
+    width: 100%;
+
+    img {
+      @include userProfile;
+    }
+
+    .input__container {
+      flex: 1;
+      border-radius: 20px;
+      background: var(--acent-color);
+
+      input {
+        width: 100%;
+        @include input;
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .share__bottom {
+    @include flexBetween;
+    ul {
+      @include flexAlign;
+      list-style: none;
+      gap: $sm-gap;
+
+      li {
+        cursor: pointer;
+
+        svg {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    button {
+      @include button;
+      color: var(--text-color);
+      background: var(--primary-color);
+      border-radius: 5px;
+      border: var(--border);
+    }
+  }
+}

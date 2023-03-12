@@ -1,2 +1,97 @@
 @import "./variables";
 @import "./constants";
+
+.app__sidebar {
+  height: 100vh;
+  background: var(--primary-color);
+  width: 25%;
+  padding: $gap;
+  transition: $trans;
+  border-right: var(--border);
+  position: sticky;
+  top: 0;
+  @include flexDirection(column);
+  gap: $gap;
+
+  h2 {
+    color: var(--b-color);
+  }
+
+  .input__container {
+    @include flexAlign;
+    gap: $sm-gap;
+    background: var(--acent-color);
+    padding: 0 $sm-gap;
+    border-radius: 5px;
+
+    input {
+      @include input;
+      color: var(--text-color);
+    }
+  }
+
+  .sidebar__routes {
+    @include flexDirection(column);
+    gap: $sm-gap;
+    list-style: none;
+
+    a {
+      @include flexAlign;
+      gap: $sm-gap;
+      padding: 0.5rem $sm-gap;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: $trans;
+
+      &.active {
+        background: var(--acent-color);
+        color: var(--b-color);
+        font-weight: bold;
+      }
+
+      &:hover {
+        background: var(--acent-color);
+        padding: 0.5rem $gap;
+      }
+    }
+  }
+
+  .sidebar__theming {
+    position: absolute;
+    bottom: 10px;
+    @include flexAlign;
+    padding: 5px;
+    gap: $gap;
+    cursor: pointer;
+
+    .toogle__theme {
+      width: 100px;
+      background: var(--secondary-color);
+      height: 40px;
+      border-radius: 20px;
+      position: relative;
+      transition: $trans;
+
+      .icon {
+        height: 30px;
+        width: 30px;
+        @include flexCenter;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 2px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        transition: all $trans;
+        margin: auto 5px;
+        box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
+      }
+
+      &.dark {
+        .icon {
+          left: 58px;
+        }
+      }
+    }
+  }
+}
