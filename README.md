@@ -1,7 +1,7 @@
 # Getting Started with the code boiler plate
 
 ```bash
-git clone -b <branch> <remote_repo>
+git clone -b rsm-starter https://github.com/zenith-noble01/youtube.git
 ```
 
 # Installing all depencies
